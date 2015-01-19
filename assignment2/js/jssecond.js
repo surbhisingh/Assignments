@@ -3,15 +3,16 @@
   function validateFirstName(n){
     var re = /[A-Za-z -']$/;
   var val = document.getElementById(n).value
-  alert(re.test(val))
     
     if(re.test(val)){
       
       document.getElementById(n).style.background ='#ccffcc';
+      document.getElementById(n + 'Error').style.display = "none";
       return true;
     }else{
-      alert("bye")
+      
       document.getElementById(n).style.background ='#e35152';
+      document.getElementById(n + 'Error').style.display = "block";
       return false;
     }
   } 
@@ -20,15 +21,16 @@
 function validateLastName(n){
     var re = /[A-Za-z -']$/;
   var val = document.getElementById(n).value
-  alert(re.test(val))
     
     if(re.test(val)){
       
       document.getElementById(n).style.background ='#ccffcc';
+      document.getElementById(n + 'Error').style.display = "none";
       return true;
     }else{
-      alert("bye")
+      
       document.getElementById(n).style.background ='#e35152';
+      document.getElementById(n + 'Error').style.display = "block";
       return false;
     }
   } 
@@ -39,14 +41,14 @@ function validateLastName(n){
       
       if (x == null || x == "")
        {
-          alert("First name must be filled out");
+          alert("Fill your First name");
           y=false;
        }
 
        var x = document.forms["myform"]["lastname"].value;
         if (x == null || x == "") 
        {
-          alert("last name must be filled out");
+          alert("Fill your Last name ");
           y=false;
        }
        
@@ -62,7 +64,7 @@ function validateLastName(n){
       var x = document.forms["myform"]["address"].value;
         if (x == null || x == "") 
         {
-          alert("address  must be filled out");
+          alert("Fill your Address");
            y=false;
         }
 

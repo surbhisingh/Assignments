@@ -1,16 +1,19 @@
+<!doctype html>
 <html>
   <head>
-     <script type="text/javascript" src="/home/bsuser1/assignment/js/jssecond.js"></script>
+     <script type="text/javascript" src="/home/bsuser1/project/assignment2/js/jssecond.js"></script>
   </head>
   <body>
-    <form name="myform" action="/home/bsuser1/assignment/index.html" onsubmit="return validateForm();" method="post">
+    <form name="myform" action="/home/bsuser1/project/assignment2/index.html" onsubmit="return validateForm();" method="post">
       First name:<br>
       <input type="text" name="firstname" id="firstname" onblur=" return validateFirstName('firstname')">
+      <span id="firstnameError" style="display: none;">You can only use alphabetic characters, hyphens and apostrophes only</span>
 
         <br>
         <br>
       Last name:<br>
       <input type="text" name="lastname" id="lastname" onblur=" return validateLastName('lastname')">
+      <span id="lastnameError" style="display: none;">You can only use alphabetic characters, hyphens and apostrophes only</span>
         <br>
         <br>
       Gender: <br>
