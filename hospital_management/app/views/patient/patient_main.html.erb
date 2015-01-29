@@ -1,0 +1,39 @@
+<center>
+  IF NEW DOCTOR THEN<a href="/create_patient"><h1> CLICK HERE </h1></a><br>
+</center>
+
+
+
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 20px;
+    text-align: left;    
+}
+</style>
+
+<h2>List Of Patients:</h2>
+<table style="width:40%">
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Problem</th>
+    <th> Department ID </th>
+    <th colspan="2">Action Performed</th>
+  </tr>
+  <% @patient.each do |i| %>
+  <tr>
+    <td><%= i.name%></td>
+    <td><%= i.age%></td>
+    <td><%= i.problem%></td>
+    <td><%= i.doctor_id%></td>
+    <td> <%= link_to "edit", "patient_main"%> / <%= link_to "destroy", "patient_main", :confirm => 'You sure you want to delete this?'%>
+    <% end%>
+  </tr>
+</table>
+
+
+

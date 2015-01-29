@@ -1,0 +1,36 @@
+<center>
+  IF NEW DOCTOR THEN<a href="/create_doctor"><h1> CLICK HERE </h1></a><br>
+</center>
+
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 20px;
+    text-align: left;    
+}
+</style>
+
+<h2>List Of Doctors:</h2>
+<table style="width:40%">
+  <tr>
+    <th>Name</th>
+    <th>Qualification</th>
+    <th>Department ID</th>
+    <th colspan="2">Action Performed</th>
+  </tr>
+  <% @doctor.each do |i| %>
+  <%@j=i%>
+  <tr>
+    <td><%= i.name%></td>
+    <td><%= i.qualification%></td>
+    <td><%= i.department_id%></td>
+        <td> <%= link_to "edit", "doctor_main"%> / <%= link_to "destroy", "doctor_destroy", data: { confirm: "Are you sure?" }%>
+    <% end%>s
+
+    
+  </tr>
+</table>
+
